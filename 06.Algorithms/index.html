@@ -1,0 +1,709 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>6.Algorithms - TeAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-algorithms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="TeAM" class="md-header-nav__button md-logo" aria-label="TeAM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            TeAM
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              6.Algorithms
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TeAM" class="md-nav__button md-logo" aria-label="TeAM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    TeAM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.RelatedWork/" title="2. Related Workd" class="md-nav__link">
+      2. Related Workd
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Terminology/" title="3. Terminology" class="md-nav__link">
+      3. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.TestData/" title="4. Test Data" class="md-nav__link">
+      4. Test Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.EvaluationApproach/" title="5.Evaluation Approach" class="md-nav__link">
+      5.Evaluation Approach
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        6.Algorithms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="6.Algorithms" class="md-nav__link md-nav__link--active">
+      6.Algorithms
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-gensim" class="md-nav__link">
+     6.1 Gensim+ 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-team" class="md-nav__link">
+     6.2 TeAM
+  </a>
+  
+    <nav class="md-nav" aria-label=" 6.2 TeAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-definition" class="md-nav__link">
+     Function Definition 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+     Overview 
+  </a>
+  
+    <nav class="md-nav" aria-label=" Overview ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-segmenting" class="md-nav__link">
+     STEP 1: Segmenting 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-indexing" class="md-nav__link">
+     STEP 2: Indexing 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-candidate-terms" class="md-nav__link">
+     STEP 3: Candidate Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-candidate-segments" class="md-nav__link">
+     STEP 4: Candidate Segments. 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.Tests/" title="7. Tests" class="md-nav__link">
+      7. Tests
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.Conclusion/" title="8.Conclusion" class="md-nav__link">
+      8.Conclusion
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-gensim" class="md-nav__link">
+     6.1 Gensim+ 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-team" class="md-nav__link">
+     6.2 TeAM
+  </a>
+  
+    <nav class="md-nav" aria-label=" 6.2 TeAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-definition" class="md-nav__link">
+     Function Definition 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+     Overview 
+  </a>
+  
+    <nav class="md-nav" aria-label=" Overview ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-segmenting" class="md-nav__link">
+     STEP 1: Segmenting 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-indexing" class="md-nav__link">
+     STEP 2: Indexing 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-candidate-terms" class="md-nav__link">
+     STEP 3: Candidate Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-candidate-segments" class="md-nav__link">
+     STEP 4: Candidate Segments. 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!-------------------------------------------------->
+
+<h1 id="6-algorithms"><span style="color:purple"> 6. Algorithms </span><a class="headerlink" href="#6-algorithms" title="Permanent link">&para;</a></h1>
+<p><!-------------------------------------------------->
+Given source-segment and target-segment databases, we have designed and developed a library that outputs a number of candidates (of choice) from the target data for each source-segment entry. 
+The TeAM algorithm allows for a number of other choices including among athers boosting the strength of a matched term using its lemma or soundex and/or matching possible abbreviations.
+To achieve this, we successfully derive benefit from existing libraries such as <span style="color:blue"><em>panda</em></span>, <span style="color:blue"><em>fuzzywuzzy</em></span>, <span style="color:blue"><em>spacy</em></span> and <span style="color:blue"><em>ftfy</em></span>. Moreover, we compare our approach with a rather simpler one mostly based on <span style="color:blue"><em>Gensim</em></span>. Hereby we explain them both.</p>
+<!-------------------------------------------------->
+
+<h2 id="61-gensim"><span style="color:purple"> 6.1 Gensim+ </span><a class="headerlink" href="#61-gensim" title="Permanent link">&para;</a></h2>
+<!-------------------------------------------------->
+
+<p>In order to have a baseline for comparing the TeAM approach, we chose the &lsquo;of the shelf&rsquo; library &lsquo;Gensim&rsquo; proposed for text search. We implement it first by strictly following the instructions presented in <a href="https://radimrehurek.com/gensim/auto_examples/core/run_core_concepts.html#sphx-glr-auto-examples-core-run-core-concepts-py">here</a>.
+Since it is meant for exact term-match and it is, therefore, unable to deal with non existing (exact) terms in the target data, the results at first appear quite poor for our complex data.
+One way to help dealing with such issue is to convert the source and target data into their respective <span style="color:blue"><em>stems</em></span>. This indeed improves the results since the matches are now approximated via the stems. Still, this does not account for misspellings or spelling variations. An attempt to address the latter issue led us to multiply the original query into a number of reconstructed queries from which the best result is selected. To reconstruct a query, n approximations are computed for each stemmed term in the query. From this, new queries are generated (term combinations by n-ary Cartesian product). For example, a query of 5 terms will result in 32 new queries if 2 candidates are found for each term. This obviously does not scale in the event of (i) big queries and/or (ii) large candidates (even 2). However, the use of a single candidate does scale and provides at list one alternative to terms that do not exist in the target data, meaning that misspell or spelling variations are now included to a certain extent.</p>
+<!--Out of the shelf, using Gensim's "Similarity Queries" over the original data results in a poor evaluation due to its inability to deal with non existing terms in the target data. One way to help dealing with such issue is to convert the source and target data into their respective <span style="color:blue">*stems*</span>. This indeed improves the results since the matches are now approximated via the stems. Still, this does not account for misspellings or spelling variations. An attempt to address the latter issue led us to multiply the original query into a number of reconstructed queries from which the best result is selected. To reconstruct a query, n approximations are computed for each stem term in the query. From this, new queries are generated (term combinations by n-ary Cartesian product). For example, a query of 5 terms will result in 32 new queries if 2 candidates are found for each term. This obviously does not scale in the event of (i) big queries and/or (ii) large candidates (even 2). However, the use of a single candidate does scale and provides at list an alternative to terms that do not exist in the target data, meaning that misspell or spelling variations are now included to a certain extent. -->
+
+<p>To summarise, using the <a href="https://radimrehurek.com/gensim/auto_examples/index.html#">Gensim</a> library we have developed and implemented a text matching approach that now includes the search of terms that do not exist in the target data. </p>
+<!-------------------------------------------------->
+
+<h2 id="62-team"><span style="color:purple"> 6.2 TeAM</span><a class="headerlink" href="#62-team" title="Permanent link">&para;</a></h2>
+<!-------------------------------------------------->
+
+<p>This section presents TeAM, the proposed algorithm for text matching. First its parameters are described, then its 4 macro steps are explained.</p>
+<!-------------------------------------------------->
+
+<h3 id="function-definition"><span style="color:purple"> Function Definition </span><a class="headerlink" href="#function-definition" title="Permanent link">&para;</a></h3>
+<!-------------------------------------------------->
+
+<details class="info" open="open"><summary>Function Definition</summary><div class="highlight"><pre><span></span><code>results = TeAM.run(
+    queries=montias_data, target=inventories, stop_words=dutch_stop_word, language=&#39;nl&#39;,
+    max_candidates=5, boost=True, preprocess=True, normalise=True, find_abbreviated=True,
+    logarithm=False, remove_number=True, no_ties=True, x_best_tf_idfs=50, bests=1,  sample=0)
+
+ Parameter Description
+    :param queries          : The source data. It can be a plain text or a list of text segments.
+    :param target           : The target data. It can be a plain text or a list of text segments.
+    :param stop_words       : List of current terms that should not be indexed.
+    :param language         : A string value determining the language (e.g en, de...) in which
+                              the source and target data are written.
+    :param max_candidates   : The number of candidates terms that can be return for a given query-token
+    :param boost            : A boolean value for deciding whether to boost the strength of a matched 
+                              candidate below a low-bound of 75 using the sound and lemma of the terms.
+    :param preprocess       : A boolean value for deciding whether to apply the fix_text_segment function for fixing
+                              inconsistencies and glitches in the source and target data
+    :param normalise_text   : Defaulted to [False], it is applied to the dutch written source and target data to
+                              normalise certain characters. For example, &#39;sch&#39; and &#39;kx&#39; will become respectfully
+                              &#39;see&#39; and &#39;xx&#39;.
+    :param normalize_number : Here too, It is also used to determine whether to convert numbers
+                              to words using num2words.
+    :param logarithm        : Defaulted to [False], it uses the log function in computing tf-idf if set to [True]
+    :param find_abbreviated : Defaulted to True, it ensures that abbreviated terms are recognised, tagged and that,
+                              possible terms for which the abbreviated term can stand for within the data are looked for.  
+    :param remove_number    : Defaulted to True, it ensures that numbers are not indexed
+    :param no_ties          : Defaulted to [True]..
+    :param x_best_tf_idfs   : Defaulted to 50. The tf_idf vector enabled us to detect potential segment candidates. 
+                              The integer value indicates the number of best candidates to look into.
+    :param bests            : By default, for a given query, the predicted best is returned (bests=1).
+    :param sample           : If the integer value is greater than 0, it prints panda tables of the index source, 
+                              target and tf_idf vector of the target data 
+    :return                 : a dictionary of list or results for each query segment
+</code></pre></div>
+
+</details>
+<!-------------------------------------------------->
+
+<h3 id="overview"><span style="color:purple"> Overview </span><a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<!-------------------------------------------------->
+
+<details class="info" open="open"><summary>Steps Overview</summary><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">queries</span><span class="p">:</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="n">target</span><span class="p">:</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="n">stop_words</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;nl&#39;</span><span class="p">,</span>
+        <span class="n">preprocess</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">normalise_text</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">normalize_number</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+        <span class="n">remove_number</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">find_abbreviated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">no_ties</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">max_candidates</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>  
+        <span class="n">boost_candidates</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">logarithm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_best_tf_idfs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">n_bests</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+
+    <span class="k">global</span> <span class="n">nl</span><span class="p">,</span> <span class="n">en</span>
+    <span class="n">nl</span><span class="p">,</span> <span class="n">en</span> <span class="o">=</span> <span class="n">nl_core_news_sm</span><span class="o">.</span><span class="n">load</span><span class="p">(),</span> <span class="n">en_core_web_sm</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+
+    <span class="c1"># STEP 1: TEXT SEGMENTATION</span>
+    <span class="n">src_segments</span><span class="p">,</span> <span class="n">source_ids_map</span> <span class="o">=</span> <span class="n">text_segments</span><span class="p">(</span><span class="n">queries</span><span class="p">)</span>
+    <span class="n">trg_segments</span><span class="p">,</span> <span class="n">target_ids_map</span> <span class="o">=</span> <span class="n">text_segments</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+
+    <span class="c1"># 2.1 INDEXING THE SOURCE</span>
+    <span class="n">src_index</span><span class="p">,</span> <span class="n">src_vectors</span><span class="p">,</span> <span class="n">src_indexed_terms_per_doc</span> <span class="o">=</span> <span class="n">text_indexer</span><span class="p">(</span>
+        <span class="n">src_segments</span><span class="p">,</span> <span class="n">stop_words</span><span class="o">=</span><span class="n">stop_words</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="n">language</span><span class="p">,</span> <span class="n">normalize_text</span><span class="o">=</span><span class="n">normalise_text</span><span class="p">,</span>
+        <span class="n">normalize_number</span><span class="o">=</span><span class="n">normalize_number</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">find_abbreviated</span><span class="o">=</span><span class="n">find_abbreviated</span><span class="p">,</span>
+        <span class="n">logarithm</span><span class="o">=</span><span class="n">logarithm</span><span class="p">,</span> <span class="n">boost</span><span class="o">=</span><span class="n">boost</span><span class="p">,</span> <span class="n">remove_numbers</span><span class="o">=</span><span class="n">remove_number</span><span class="p">)</span>
+
+    <span class="c1"># 2.2 INDEXING THE TARGET</span>
+    <span class="n">trg_index</span><span class="p">,</span> <span class="n">trg_vectors</span><span class="p">,</span> <span class="n">trg_indexed_terms_per_doc</span> <span class="o">=</span> <span class="n">text_indexer</span><span class="p">(</span>
+        <span class="n">trg_segments</span><span class="p">,</span> <span class="n">stop_words</span><span class="o">=</span><span class="n">stop_words</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="n">language</span><span class="p">,</span> <span class="n">normalize_text</span><span class="o">=</span><span class="n">normalise_text</span><span class="p">,</span>
+        <span class="n">normalize_number</span><span class="o">=</span><span class="n">normalize_number</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">find_abbreviated</span><span class="o">=</span><span class="n">find_abbreviated</span><span class="p">,</span>
+        <span class="n">logarithm</span><span class="o">=</span><span class="n">logarithm</span><span class="p">,</span> <span class="n">boost</span><span class="o">=</span><span class="n">boost</span><span class="p">,</span> <span class="n">remove_numbers</span><span class="o">=</span><span class="n">remove_number</span><span class="p">,</span>
+        <span class="n">build_tfidf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># 3. UPDATE THE SOURCE&#39;S INDEXES WITH CANDIDATES</span>
+    <span class="c1"># For each indexed term in the source index, find a maximum of 5 candidate terms in the target index</span>
+    <span class="n">find_candidates</span><span class="p">(</span><span class="n">src_index</span><span class="p">,</span> <span class="n">trg_index</span><span class="p">,</span> <span class="n">max_candidates</span><span class="o">=</span><span class="n">max_candidates</span><span class="p">,</span> <span class="n">boost</span><span class="o">=</span><span class="n">boost</span><span class="p">)</span>
+
+    <span class="c1"># 4. FOR A GIVEN SOURCE-SEGMENT FIND ONE OR MORE SIMILAR TARGET-SEGMENTS</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">find_match</span><span class="p">(</span>
+        <span class="n">src_index</span><span class="p">,</span> <span class="n">trg_index</span><span class="p">,</span> <span class="n">trg_vectors</span><span class="p">,</span> <span class="n">src_segments</span><span class="p">,</span> <span class="n">trg_segments</span><span class="p">,</span>
+        <span class="n">src_indexed_terms_per_doc</span><span class="p">,</span> <span class="n">x_best_tf_idfs</span><span class="p">,</span> <span class="n">x_bests</span><span class="o">=</span><span class="n">bests</span><span class="p">,</span> <span class="n">no_ties</span><span class="o">=</span><span class="n">no_ties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">results</span>
+</code></pre></div>
+
+</details>
+<!-------------------------------------------------->
+
+<!--### <span style="color:purple"> Algorithm Detail </span>-->
+
+<!-------------------------------------------------->
+
+<!-------------------------------------------------->
+
+<h4 id="step-1-segmenting"><span style="color:purple"> STEP 1: Segmenting </span><a class="headerlink" href="#step-1-segmenting" title="Permanent link">&para;</a></h4>
+<!-------------------------------------------------->
+
+<blockquote>
+<p>The <span style="color:blue"><em>ideal input scenario</em></span> for &ldquo;text-segment&rdquo; matching with the proposed library is for the source and target data to each be provided as a <span style="color:blue"><em>list of segments</em></span>. However, if the data is provided as <span style="color:blue"><em>plain text</em></span> instead, our basic text segmentation function in the library converts the plain text-document into a list of lines partitioned based on the <code>\n</code> character as segments.<br />
+In short, for now, the default implementation is a <span style="color:blue"><em>line-based segmentation</em></span> if the input comes as plain text. We expect in the future to enable other types of segmentation such as <span style="color:blue"><em>phrase-based</em></span> or <span style="color:blue"><em>paragraph-based segmentations</em></span>. Naturally, for the algorithm to produce sensible results, the source and target segment-sets should follow the same segmentation criteria, or should at least be minimally compatible. For example, source segmented as phrases and target segmented as lines is not ideal, but can still provide meaningful results.</p>
+</blockquote>
+<!-------------------------------------------------->
+
+<h4 id="step-2-indexing"><span style="color:purple"> STEP 2: Indexing </span><a class="headerlink" href="#step-2-indexing" title="Permanent link">&para;</a></h4>
+<!-------------------------------------------------->
+
+<blockquote>
+<p>The function iterates over each segment from the segments input list. <strong>First</strong>, if the <code>preprocess</code> argument is set as true (default), the <span style="color:blue"><em>fix_text_segment</em></span> function from <span style="color:blue"><em>ftfy</em></span> is applied over each input segments. This provides some fixes for inconsistencies and glitches.
+<strong>Then</strong>, if the <code>normalize_number</code> parameter is set to true (default), the numbers in the segments are converted into words using <span style="color:blue"><em>regular expression</em></span> to detect numbers within the segment and the python library <span style="color:blue"><em>num2words</em></span> to convert the numbers into word(s) according to the chosen language.
+Moreover, if the <code>normalize_text</code> parameter is set as true (default) and <code>language</code> is set to dutch,
+a language normalisation is applied to the segments using the following list of tuples <mark>(in future versions this list could be provided as parameter)</mark>:</p>
+<p><div class="highlight"><pre><span></span><code>(&#39;qu&#39;, &#39;kw&#39;), (&#39;sch&#39;, &#39;se&#39;), (&#39;ks&#39;, &#39;x&#39;), (&#39;kx&#39;, &#39;x&#39;), (&#39;kc&#39;, &#39;k&#39;), (&#39;ck&#39;, &#39;k&#39;),
+(&#39;dt&#39;, &#39;t&#39;), (&#39;td&#39;, &#39;t&#39;), (&#39;ch&#39;, &#39;g&#39;), (&#39;sz&#39;, &#39;s&#39;), (&#39;ij&#39;, &#39;y&#39;)
+</code></pre></div>
+<strong>Finally</strong>, we run <span style="color:blue"><em>spacy</em></span> over the fixed segment for language based tokenisation. <!--On the spacy generated segment's tokens (second for-loop),the indexing of a token is controlled by whether the term is a punctuation or not. Optionally, stop words are also not indexed if provided. The same is valid for numbers if or *normalize_number* and/or *remove_numbers* parameters are set to True-->
+Then, for each token, its inclusion in the index is ruled by (i) not-punctuation; (ii) not-stop-word, if such list is provided; (ii) not-number-like, if <code>normalize_number</code> and/or <code>remove_numbers</code> is set as true (default). If these conditions are passed, the lowercased version of the token is indexed, and property values of the term are documented accordingly.</p>
+</blockquote>
+<!-------------------------------------------------->
+
+<!--#### <span style="color:purple"> STEP 3: Updating the source index with term-candidates </span>
+-->
+
+<h4 id="step-3-candidate-terms"><span style="color:purple"> STEP 3: Candidate Terms</span><a class="headerlink" href="#step-3-candidate-terms" title="Permanent link">&para;</a></h4>
+<!-------------------------------------------------->
+
+<blockquote>
+<p><span style="color:black"> <strong>1. Approximations to a query-term</strong> </span>
+The input term (query-term) is of type string and represents either a full term or an abbreviated term. The task here of finding <em>m</em> candidate-terms (<em>m</em> given by the <code>max_candidates</code> parameter, defaulted to <span style="color:red"><strong>5</strong></span>) for the each of the given query-terms is performed using our <em>fuzzy_match</em> function implemented on top the <span style="color:blue"><em>fuzzywuzzy</em></span> library. For a given query-term, <em>fuzzy_match</em> searches for at least <em>m</em> candidates among the indexed target terms. Only the ones with a minimum matching strength of <span style="color:red"><strong>60</strong></span> are returned. The function returns a dictionary of candidate-terms (abbreviated or not) with their respective matching-strength. </p>
+<p><span style="color:black"> <strong>2. Candidates strength boosting</strong> </span>
+The strengths of the respective candidate-terms previously selected can be boosted based on how similar their respective lemmas (and/or soundex) are to the corresponding query-terms, if the <code>boost</code> parameter is set as true (default). Furthermore, the boost is only applied to candidates for which the strength is below 1.
+For these relatively “weak terms”, the strength obtained by comparing lemmas and/or soundex is averaged with the approximation strength. If the resulting new strength is above a preset threshold of <span style="color:red"><strong>75</strong></span>, an average of the original strength and the current one is computed otherwise, it is left unmodified.</p>
+<p><span style="color:black"> <strong>3. Abbreviations or extensions to a query token</strong> </span>
+Roughly, terms are considered possible abbreviations if they are followed by a dot that has not been classified as punctuation by <span style="color:blue"><em>spacy</em></span>.</p>
+<p>The input here is the panda’s frame generated in the previous section. The idea here is to find within the frame potential extensions (full tokens) for an abbreviated token (shortened form of a token). For example, the full token <em>civic</em> can extend the abbreviated <em>cvc.</em> whereas <em>civilian</em> does not. The goal is to speed up the (later) process of matching possible abbreviations, if the parameter <code>find_abbreviated</code> is set as true (default).</p>
+</blockquote>
+<!-------------------------------------------------->
+
+<h4 id="step-4-candidate-segments"><span style="color:purple"> STEP 4: Candidate Segments. </span><a class="headerlink" href="#step-4-candidate-segments" title="Permanent link">&para;</a></h4>
+<!-------------------------------------------------->
+
+<blockquote>
+<p><span style="color:black"> 1. Collect candidates-terms for the query-terms </span>
+After the indexing of both source and target, each entry in the source index is populated with <em>m=5</em> candidates from the target index as described in step 3. This allows us to quickly retrieve candidates for each of the query-terms. For example, given a query-segment with 6 terms and <code>max_candidates</code> set to 5, we can quickly retrieve 30 maximum candidate-terms from various target-segments that will be further evaluated in combination.</p>
+<p><span style="color:black"> 2. Retrieve all candidate-segments based of their tf-idf</span></p>
+<p>A <strong>tf-idf matrix</strong> computed for the target segments is filtered based on the previously collected candidate-terms, such that it contains only the documents/segments in which at least one of the candidate-terms occur. The candidate-segments are then <strong>sorted in descending order</strong> based on the sum of their respective terms&rsquo; tf-idf weights, meaning the higher the score the better. We then select <strong>the <em>n</em> first best candidate-segments</strong>, according to the parameter <code>n\_best\_tf\_idfs</code> (default <span style="color:red"><strong>50</strong></span>).</p>
+<!-- This feature vector favours rare words which means flushing out documents with non common misspellings for example *Neederlandsche histoorien* get a much higher tf\_idf compared to *Nederlandse historien* because correctly writing Nederlandse and historien is more frequent that the misspells. To compensate for that, <span style="color:blue"> our final choice for the best candidate(s) depends on "the best one(s)" (i) being in the pool of best td\_idfs and (ii) having the best hit (see next section were we discuss the hit featutre).
+ </span>-->
+
+<p><span style="color:black"> 3. Compute the number of hits obtained per document </span>
+At this step, for each of the <strong><!--50--><em>n</em> candidate-segments</strong>, we sum up the strength of its composing candidate-terms. This gives an idea of the overall matching strength for a given candidate-segment.</p>
+<p>Then, we compute their delta-hit, i.e. the difference between the maximum possible hit and the observed hit. Consequently, the candidates are <strong>reordered in ascending order</strong> based on their delta-hits, to which extra penalty and rewards are applied. The <strong>reward</strong> <em>counts the number of intersecting terms between source and target</em>, while the <strong>penalty</strong> <em>looks at the offset length of the target candidate-segment with respect to the query-segment</em>. Now, here, the smaller the score the better, since small delta implies being closer to the goal.</p>
+<p>In the end, we return the candidate-segment(s) according to the parameterised argument <strong>n_bests (default set to 1)</strong>. In the default setting, the function returns the first best even in the event of ties. If the value assigned to <code>n_bests</code> is greater than <span style="color:red"><strong>1</strong></span>, the function returns the number of candidates requested. However, in case of ties, it returns all of them even if the requested number is less than the number of ties.</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../05.EvaluationApproach/" title="5.Evaluation Approach" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                5.Evaluation Approach
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../07.Tests/" title="7. Tests" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                7. Tests
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

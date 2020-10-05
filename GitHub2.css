@@ -1,0 +1,77 @@
+body {
+  font-family: Garamond, Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; 
+  text-align: justify}
+  
+h1 {
+  font-size: 30px;
+  color: red; }
+  
+  
+
+h2 {
+  font-size: 26px;
+  border-bottom: 1px solid #cccccc;
+  color: red; }
+
+h3 {font-size: 24px; color: red;}
+
+h4 {font-size: 22px; color: red;}
+
+h5 {font-size: 20px; color: red;}
+
+h6 {color: red; font-size: 14px; color: red;}
+
+h7 {color: red; font-size: 12px; color: red;}
+  
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+  
+
+table {
+  padding: 0; border-collapse: collapse; }
+  
+  table tr {
+  	font-size: 11px;
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    
+    table tr:nth-child(2n) {
+      background-color: #FEF5E7 ; 
+     }
+      
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; 
+      background-color: #F5CBA7;}
+      
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+      
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+      
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+
+.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+      
+pre[data-language-display]:before {
+  content: attr(data-language-display);
+}
+

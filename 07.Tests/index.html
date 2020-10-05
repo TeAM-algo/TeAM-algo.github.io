@@ -1,0 +1,818 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>7. Tests - TeAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7-tests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="TeAM" class="md-header-nav__button md-logo" aria-label="TeAM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            TeAM
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              7. Tests
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TeAM" class="md-nav__button md-logo" aria-label="TeAM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    TeAM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.RelatedWork/" title="2. Related Workd" class="md-nav__link">
+      2. Related Workd
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Terminology/" title="3. Terminology" class="md-nav__link">
+      3. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.TestData/" title="4. Test Data" class="md-nav__link">
+      4. Test Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.EvaluationApproach/" title="5.Evaluation Approach" class="md-nav__link">
+      5.Evaluation Approach
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.Algorithms/" title="6.Algorithms" class="md-nav__link">
+      6.Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        7. Tests
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="7. Tests" class="md-nav__link md-nav__link--active">
+      7. Tests
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-gensim-versus-team" class="md-nav__link">
+    7.1 Gensim+ versus TeAM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-discussion" class="md-nav__link">
+     Result Discussion 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-1-default-settings" class="md-nav__link">
+    TEST-1: Default Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-2-stop_wordsnone" class="md-nav__link">
+    TEST-2: stop_words=None
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-3-boostfalse" class="md-nav__link">
+    TEST-3: boost=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-4-preprocessfalse" class="md-nav__link">
+    TEST-4: preprocess=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-5-normalisefalse" class="md-nav__link">
+    TEST-5: normalise=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-6-find_abbreviatedfalse" class="md-nav__link">
+    TEST-6: find_abbreviated=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-7-normalize_number-remove_numberfalse" class="md-nav__link">
+    TEST-7:  normalize_number, remove_number=False
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.Conclusion/" title="8.Conclusion" class="md-nav__link">
+      8.Conclusion
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-gensim-versus-team" class="md-nav__link">
+    7.1 Gensim+ versus TeAM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-discussion" class="md-nav__link">
+     Result Discussion 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-1-default-settings" class="md-nav__link">
+    TEST-1: Default Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-2-stop_wordsnone" class="md-nav__link">
+    TEST-2: stop_words=None
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-3-boostfalse" class="md-nav__link">
+    TEST-3: boost=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-4-preprocessfalse" class="md-nav__link">
+    TEST-4: preprocess=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-5-normalisefalse" class="md-nav__link">
+    TEST-5: normalise=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-6-find_abbreviatedfalse" class="md-nav__link">
+    TEST-6: find_abbreviated=False
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-7-normalize_number-remove_numberfalse" class="md-nav__link">
+    TEST-7:  normalize_number, remove_number=False
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!-------------------------------------------------->
+
+<h1 id="7-tests"><span style="color:purple"> 7. TESTS. </span><a class="headerlink" href="#7-tests" title="Permanent link">&para;</a></h1>
+<!-------------------------------------------------->
+
+<p>In this section we present the results of the conducted experiments. First, we compare results using both approaches previously described. Then we present results obtained by using different settings for the TeAM approach.</p>
+<p>For all experiments we use stop-words for Dutch written text as provided below. They were obtained <a href="http://www.damienvanholten.com/blog/dutch-stop-words/">here</a>, except for the terms &lsquo;noch&rsquo;, &lsquo;den and &lsquo;vant&rsquo; which were added by us.</p>
+<details class="info" open="open"><summary>Stop-words</summary><div class="highlight"><pre><span></span><code>dutch_stop_words = 
+    [&#39;aan&#39;,       &#39;af&#39;,       &#39;al&#39;,       &#39;alles&#39;,        &#39;als&#39;,      &#39;altijd&#39;,   &#39;andere&#39;,
+     &#39;ben&#39;,       &#39;bij&#39;,      &#39;daar&#39;,     &#39;dan&#39;,          &#39;dat&#39;,      &#39;de&#39;,       &#39;der&#39;,
+     &#39;deze&#39;,      &#39;die&#39;,      &#39;dit&#39;,      &#39;doch&#39;,         &#39;doen&#39;,     &#39;door&#39;,     &#39;dus&#39;,
+     &#39;een&#39;,       &#39;eens&#39;,     &#39;en&#39;,       &#39;er&#39;,           &#39;ge&#39;,       &#39;geen&#39;,     &#39;geweest&#39;,
+     &#39;haar&#39;,      &#39;had&#39;,      &#39;heb&#39;,      &#39;hebben&#39;,       &#39;heeft&#39;,    &#39;hem&#39;,      &#39;het&#39;,
+     &#39;hier&#39;,      &#39;hij&#39;,      &#39;hoe&#39;,      &#39;hun&#39;,          &#39;iemand&#39;,   &#39;iets&#39;,     &#39;ik&#39;,
+     &#39;in&#39;,        &#39;is&#39;,       &#39;ja&#39;,       &#39;je&#39;,           &#39;kan&#39;,      &#39;kon&#39;,      &#39;kunnen&#39;,
+     &#39;maar&#39;,      &#39;me&#39;,       &#39;meer&#39;,     &#39;men&#39;,          &#39;met&#39;,      &#39;mij&#39;,      &#39;mijn&#39;,
+     &#39;moet&#39;,      &#39;na&#39;,       &#39;naar&#39;,     &#39;niet&#39;,         &#39;niets&#39;,    &#39;nog&#39;,      &#39;nu&#39;,
+     &#39;of&#39;,        &#39;om&#39;,       &#39;omdat&#39;,    &#39;ons&#39;,          &#39;ook&#39;,      &#39;op&#39;,       &#39;over&#39;,
+     &#39;reeds&#39;,     &#39;te&#39;,       &#39;tegen&#39;,    &#39;toch&#39;,         &#39;toen&#39;,     &#39;tot&#39;,      &#39;u&#39;,
+     &#39;uit&#39;,       &#39;uw&#39;,       &#39;van&#39;,      &#39;veel&#39;,         &#39;voor&#39;,     &#39;want&#39;,     &#39;waren&#39;,
+     &#39;was&#39;,       &#39;wat&#39;,      &#39;we&#39;,       &#39;wel&#39;,          &#39;werd&#39;,     &#39;wezen&#39;,    &#39;wie&#39;,
+     &#39;wij&#39;,       &#39;wil&#39;,      &#39;worden&#39;,   &#39;zal&#39;,          &#39;ze&#39;,       &#39;zei&#39;,      &#39;zelf&#39;,
+     &#39;zich&#39;,      &#39;zij&#39;,      &#39;zijn&#39;,     &#39;zo&#39;,           &#39;zonder&#39;,   &#39;zou&#39;,      &#39;noch&#39;, 
+     &#39;den&#39;,       &#39;vant&#39;]
+</code></pre></div>
+
+</details>
+<h4 id="71-gensim-versus-team"><span style="color:purple">7.1 Gensim+ versus TeAM</span><a class="headerlink" href="#71-gensim-versus-team" title="Permanent link">&para;</a></h4>
+<p>In this section, we compare both approaches by increasing the parameter that defines the number <code>m</code> of maximum candidate approximations allowed for each term in a query. This important feature could have a big impact in the algorithm for its combinatorial nature, i.e. in principle the <code>0&lt;=n&lt;=m</code> candidates for each term need to be combined.
+Results from the table present the execution times and the F<sub>1</sub> evaluation measures given an <code>m</code> value in the interval [1, 10]. The table shows that the proposed approach (TeAM) outperforms our implementation of Gensim++, which at first appears to be fast in execution time. The success of TeAM approach is specially because the combinatorial nature of the aforementioned feature is addressed in such a way that it does not affect the performance, in spite of all the extra features offered compared to the simple approach based on Gensim++. In this experiment, TeAM is at it best (F<sub>1</sub>=0.95) with both 6 and 7 candidates-options for a given term in the input query.</p>
+<!--| Candidates Per Term   | Gensim++               | TeAM                   |
+| :------------------:  |:------------------:    | :--------------------: |
+| 1                         | 0:00:37.367527 (0.738) | 0:02:27.525059 (0.771) |
+| 2                         | 0:01:39.538036 (0.768) | 0:02:28.986608 (0.780) |
+| 3                         | ---                    | 0:02:27.902787 (0.795) |
+| 4                         | ---                    | 0:02:30.695861 (0.795) |
+| 5                         | ---                    | 0:02:29.887936 (0.785) |-->
+
+<table>
+<thead>
+<tr>
+<th align="center">Candidates Per Term</th>
+<th align="center">Gensim++</th>
+<th align="center">TeAM - Best 50 TF_IDF</th>
+<th align="center">TeAM - BEST 100 TF_IDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">0:00:36.943996 (0.870)</td>
+<td align="center">0:00:39.220609 (0.890)</td>
+<td align="center">0:00:42.995636 (0.890)</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">0:01:39.538036 (0.768)</td>
+<td align="center">0:00:39.690304 (0.900)</td>
+<td align="center">0:00:42.633038 (0.900)</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:40.725126 (0.925)</td>
+<td align="center">0:00:42.508065 (0.920)</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:39.612479 (0.945)</td>
+<td align="center">0:00:43.408359 (0.940)</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:39.980332 (0.945)</td>
+<td align="center">0:00:42.566867 (0.940)</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:40.150912 (0.950)</td>
+<td align="center">0:00:42.716441 (0.940)</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:40.094593 (0.950)</td>
+<td align="center">0:00:43.328592 (0.935)</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:39.921235 (0.950)</td>
+<td align="center">0:00:43.198330 (0.940)</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:39.811426 (0.935)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">&mdash;</td>
+<td align="center">0:00:40.319461 (0.930)</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="result-discussion"><span style="color:purple"> Result Discussion </span><a class="headerlink" href="#result-discussion" title="Permanent link">&para;</a></h4>
+<p>The observation is that the increase of the number of candidates per query-term or the number of best tf_idfs candidates-segments impacts negatively the quality of the results produced by TeAM once passed its optimum. This contradicts the our expectation.  However, as the table above shows, pass height candidates per query-term, the F<sub>1</sub> score starts decreasing.</p>
+<p>The right answer is not always the best match which explains the fluctuation  of the F<sub>1</sub> scores.</p>
+<p>This feature vector favours rare words which means flushing out documents with non common misspellings for example <em>Neederlandsche histoorien</em> get a much higher tf_idf compared to <em>Nederlandse historien</em> because correctly writing Nederlandse and historien is more frequent that the misspells. To compensate for that, <span style="color:blue"> our final choice for the best candidate(s) depends on &ldquo;the best one(s)&rdquo; (i) being in the pool of best td_idfs and (ii) having the best hit.
+ </span></p>
+<h3 id="test-1-default-settings"><span style="color:purple">TEST-1: Default Settings</span><a class="headerlink" href="#test-1-default-settings" title="Permanent link">&para;</a></h3>
+<p>The first experiment uses the default setting of each parameter, as shown in the code bellow, followed by the result of the execution. The obtained F<sub>1</sub> measure is 0.945 and the execution time is about 40s.</p>
+<details class="example" open="open"><summary>Default Settings</summary><div class="highlight"><pre><span></span><code>results = TeAM.run(
+            queries=source_data, target=target_data, stop_words=TeAM.dutch_stop_word, language=language,
+            preprocess=True, normalise_text=True, normalize_number=True, remove_number=True,
+            find_abbreviated=True, boost_candidates=True, logarithm=False, ties=False,
+            max_candidates=7, n_best_tf_idfs=50, n_bests=1, threshold=0)
+</code></pre></div>
+
+</details>
+<details class="example" open="open"><summary>Default Settings Results</summary><div class="highlight"><pre><span></span><code>1. Segmenting the source and target Text                   200 | 4179
+2.1 Indexing the sources segments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           0:00:03.035731
+
+    257      .................petrus.................   in line    200 / 200
+
+    1. So far with a dictionary of 257 indexes          0:00:01.639557
+    2. So far with Frames                               0:00:01.641369
+    3. So far with abbreviation                         0:00:01.644959
+
+2.2 Indexing the targets segments                       0:00:04.680766
+
+    3617     ...............beukelaere...............   in line   4178 / 4179
+
+    1. So far with a dictionary of 3617 indexes         0:00:29.802926
+        -&gt;     3617 / 3617     beukelaere               0:00:00.034006
+    2. So far with Frames                               0:00:29.845476
+    3. So far with abbreviation                         0:00:29.900189
+
+3. Finding 5 candidates per sources term                0:00:34.581303
+
+    257      ................petrus.................    0:00:05.248847 [Approx: 5 s] [Boost: 5 s] [Abbrev: 5 s]
+
+4. Given a src-seg find a similar trg-seg               0:00:39.849065
+
+    Document [..199] een cleijn bortje met een ebben lijstje van den apostel Petrus
+
+5. It took a total of                                  0:00:40.736017
+
+
+                   -----------------------------------
+                   |       4179 GROUND TRUTHS        |
+                   -----------------------------------
+                   |  GT Positive   |  GT Negative   |
+                   |      200       |      3979      |
+---------------------------------------------------------------------------------------------------------
+        | Positive | True Positive  | False Positive |      Precision      | False discovery rate (FDR) |
+        |   200    |      189       |       11       |        0.945        |           0.055            |
+PREDICT -------------------------------------------------------------------------------------------------
+  4179  | Negative | False Negative | True Negative  | False omission rate | Negative predictive value  |
+        |   3979   |       11       |      3968      |        0.003        |           0.997            |
+---------------------------------------------------------------------------------------------------------
+                   |     Recall     |    Fall-out    | P. Likelihood Ratio |   F1 score     Accuracy    |
+                   |     0.945      |     0.003      |       315.0         |     0.945        0.995     |
+                   --------------------------------------------------------------------------------------
+</code></pre></div>
+
+</details>
+<h3 id="test-2-stop_wordsnone"><span style="color:purple">TEST-2: stop_words=None</span><a class="headerlink" href="#test-2-stop_wordsnone" title="Permanent link">&para;</a></h3>
+<p>In this experiment, the result shows that not applying <strong>stop words</strong> appear detrimental to the performance of TeAM compared to the default settings, producing F<sub>1</sub> measure 0.925 against the original 0.945 with a negligible execution time difference.</p>
+<details class="example" open="open"><summary>Stop_words=None</summary><div class="highlight"><pre><span></span><code>                  -----------------------------------
+                   |       4179 GROUND TRUTHS        |
+                   -----------------------------------
+                   |  GT Positive   |  GT Negative   |
+                   |      200       |      3979      |
+---------------------------------------------------------------------------------------------------------
+        | Positive | True Positive  | False Positive |      Precision      | False discovery rate (FDR) |
+        |   200    |      185       |       15       |        0.925        |           0.075            |
+PREDICT -------------------------------------------------------------------------------------------------
+  4179  | Negative | False Negative | True Negative  | False omission rate | Negative predictive value  |
+        |   3979   |       15       |      3964      |        0.004        |           0.996            |
+---------------------------------------------------------------------------------------------------------
+                   |     Recall     |    Fall-out    | P. Likelihood Ratio |   F1 score     Accuracy    |
+                   |     0.925      |     0.004      |       231.25        |     0.925        0.993     |
+                   --------------------------------------------------------------------------------------
+</code></pre></div>
+
+</details>
+<h3 id="test-3-boostfalse"><span style="color:purple">TEST-3: boost=False</span><a class="headerlink" href="#test-3-boostfalse" title="Permanent link">&para;</a></h3>
+<p>Here again, compared to the default settings the result shows that not applying <strong>candidate boost</strong> appears detrimental to the performance of TeAM, producing F<sub>1</sub> measure 0.925 against the original 0.945 with a negligible execution time difference.</p>
+<details class="example" open="open"><summary>Boost=False</summary><div class="highlight"><pre><span></span><code>                   -----------------------------------
+                   |       4179 GROUND TRUTHS        |
+                   -----------------------------------
+                   |  GT Positive   |  GT Negative   |
+                   |      200       |      3979      |
+---------------------------------------------------------------------------------------------------------
+        | Positive | True Positive  | False Positive |      Precision      | False discovery rate (FDR) |
+        |   200    |      185       |       15       |        0.925        |           0.075            |
+PREDICT -------------------------------------------------------------------------------------------------
+  4179  | Negative | False Negative | True Negative  | False omission rate | Negative predictive value  |
+        |   3979   |       15       |      3964      |        0.004        |           0.996            |
+---------------------------------------------------------------------------------------------------------
+                   |     Recall     |    Fall-out    | P. Likelihood Ratio |   F1 score     Accuracy    |
+                   |     0.925      |     0.004      |       231.25        |     0.925        0.993     |
+                   --------------------------------------------------------------------------------------
+</code></pre></div>
+
+</details>
+<h3 id="test-4-preprocessfalse"><span style="color:purple">TEST-4: preprocess=False</span><a class="headerlink" href="#test-4-preprocessfalse" title="Permanent link">&para;</a></h3>
+<p>Removing the <strong>text preprocessing</strong> consisting in fixes for inconsistencies and glitches appear to not affect TeAM&rsquo;s result for this experiment. This may suggest that the used data may be highly free from inconsistencies and glitches. Here, the result show similar F<sub>1</sub> score of 0.945 compared to the original score. Since having clean data may not always be true, and the difference in execution time seem negligible, this feature is enabled by default.</p>
+<details class="example" open="open"><summary>preprocess=False</summary><div class="highlight"><pre><span></span><code>                   -----------------------------------
+                   |       4179 GROUND TRUTHS        |
+                   -----------------------------------
+                   |  GT Positive   |  GT Negative   |
+                   |      200       |      3979      |
+---------------------------------------------------------------------------------------------------------
+        | Positive | True Positive  | False Positive |      Precision      | False discovery rate (FDR) |
+        |   200    |      189       |       11       |        0.945        |           0.055            |
+PREDICT -------------------------------------------------------------------------------------------------
+  4179  | Negative | False Negative | True Negative  | False omission rate | Negative predictive value  |
+        |   3979   |       11       |      3968      |        0.003        |           0.997            |
+---------------------------------------------------------------------------------------------------------
+                   |     Recall     |    Fall-out    | P. Likelihood Ratio |   F1 score     Accuracy    |
+                   |     0.945      |     0.003      |       315.0         |     0.945        0.995     |
+                   --------------------------------------------------------------------------------------
+</code></pre></div>
+
+</details>
+<h3 id="test-5-normalisefalse"><span style="color:purple">TEST-5: normalise=False</span><a class="headerlink" href="#test-5-normalisefalse" title="Permanent link">&para;</a></h3>
+<p>Compared to the default settings, the result shows that not applying <strong>text normalisation</strong> appears detrimental to the performance of TeAM in this experiment, producing an F<sub>1</sub> score of 0.93 against the original 0.945. The execution time difference is also negligible. To keep i mind, the current code provides only dutch normalisation.</p>
+<details class="example" open="open"><summary>normalise=False</summary><div class="highlight"><pre><span></span><code>                   -----------------------------------
+                   |       4179 GROUND TRUTHS        |
+                   -----------------------------------
+                   |  GT Positive   |  GT Negative   |
+                   |      200       |      3979      |
+---------------------------------------------------------------------------------------------------------
+        | Positive | True Positive  | False Positive |      Precision      | False discovery rate (FDR) |
+        |   200    |      186       |       14       |        0.93         |            0.07            |
+PREDICT -------------------------------------------------------------------------------------------------
+  4179  | Negative | False Negative | True Negative  | False omission rate | Negative predictive value  |
+        |   3979   |       14       |      3965      |        0.004        |           0.996            |
+---------------------------------------------------------------------------------------------------------
+                   |     Recall     |    Fall-out    | P. Likelihood Ratio |   F1 score     Accuracy    |
+                   |      0.93      |     0.004      |       232.5         |     0.93         0.993     |
+                   --------------------------------------------------------------------------------------
+</code></pre></div>
+
+</details>
+<h3 id="test-6-find_abbreviatedfalse"><span style="color:purple">TEST-6: find_abbreviated=False</span><a class="headerlink" href="#test-6-find_abbreviatedfalse" title="Permanent link">&para;</a></h3>
+<p><strong>Finding abbreviations</strong> helps approximating an abbreviated term to its fullest form eiter on the source or target data. This is expected to help matching documents known to have abbreviations. ==However, the results of this experiment show that it does not have an impact in our data. This means that the matching of the non-abbreviated terms are enough to find the right segment match. Since this may not always be true, and the difference in execution time seem negligible, this feature is enabled by default.</p>
+<details class="example" open="open"><summary>find_abbreviated =False</summary><div class="highlight"><pre><span></span><code>                   -----------------------------------
+                   |       4179 GROUND TRUTHS        |
+                   -----------------------------------
+                   |  GT Positive   |  GT Negative   |
+                   |      200       |      3979      |
+---------------------------------------------------------------------------------------------------------
+        | Positive | True Positive  | False Positive |      Precision      | False discovery rate (FDR) |
+        |   200    |      189       |       11       |        0.945        |           0.055            |
+PREDICT -------------------------------------------------------------------------------------------------
+  4179  | Negative | False Negative | True Negative  | False omission rate | Negative predictive value  |
+        |   3979   |       11       |      3968      |        0.003        |           0.997            |
+---------------------------------------------------------------------------------------------------------
+                   |     Recall     |    Fall-out    | P. Likelihood Ratio |   F1 score     Accuracy    |
+                   |     0.945      |     0.003      |       315.0         |     0.945        0.995     |
+</code></pre></div>
+
+</details>
+<h3 id="test-7-normalize_number-remove_numberfalse"><span style="color:purple">TEST-7:  normalize_number, remove_number=False</span><a class="headerlink" href="#test-7-normalize_number-remove_numberfalse" title="Permanent link">&para;</a></h3>
+<p>In general, we expect the removal of number to be a good practice specially if it provides no adding value to the search. In doing so, it enables a decrease in space usage and computation power. As the result shows, in our experiment, 
+<strong>removing or normalising numbers</strong> does not impact the result. Though, the good thing about keeping numbers is that it may help untying matches if relevant.
+<!--as opposed to it removal is that it may help in eliminating uncertainty--> </p>
+<details class="example" open="open"><summary>normalize_number, remove_number=False</summary><div class="highlight"><pre><span></span><code>                   -----------------------------------
+                   |       4179 GROUND TRUTHS        |
+                   -----------------------------------
+                   |  GT Positive   |  GT Negative   |
+                   |      200       |      3979      |
+---------------------------------------------------------------------------------------------------------
+        | Positive | True Positive  | False Positive |      Precision      | False discovery rate (FDR) |
+        |   200    |      189       |       11       |        0.945        |           0.055            |
+PREDICT -------------------------------------------------------------------------------------------------
+  4179  | Negative | False Negative | True Negative  | False omission rate | Negative predictive value  |
+        |   3979   |       11       |      3968      |        0.003        |           0.997            |
+---------------------------------------------------------------------------------------------------------
+                   |     Recall     |    Fall-out    | P. Likelihood Ratio |   F1 score     Accuracy    |
+                   |     0.945      |     0.003      |       315.0         |     0.945        0.995     |
+                   --------------------------------------------------------------------------------------
+</code></pre></div>
+
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../06.Algorithms/" title="6.Algorithms" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                6.Algorithms
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../08.Conclusion/" title="8.Conclusion" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                8.Conclusion
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

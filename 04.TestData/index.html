@@ -1,0 +1,616 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>4. Test Data - TeAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-test-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="TeAM" class="md-header-nav__button md-logo" aria-label="TeAM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            TeAM
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              4. Test Data
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TeAM" class="md-nav__button md-logo" aria-label="TeAM">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    TeAM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.RelatedWork/" title="2. Related Workd" class="md-nav__link">
+      2. Related Workd
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Terminology/" title="3. Terminology" class="md-nav__link">
+      3. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        4. Test Data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="4. Test Data" class="md-nav__link md-nav__link--active">
+      4. Test Data
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-target-data" class="md-nav__link">
+     4.1 Target Data 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-source-data" class="md-nav__link">
+     4.2 Source data 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-foreseen-matching-issues" class="md-nav__link">
+     4.3 Foreseen matching issues 
+  </a>
+  
+    <nav class="md-nav" aria-label=" 4.3 Foreseen matching issues ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major" class="md-nav__link">
+    Major
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minor" class="md-nav__link">
+    Minor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repetitions-ties" class="md-nav__link">
+    Repetitions &amp; Ties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.EvaluationApproach/" title="5.Evaluation Approach" class="md-nav__link">
+      5.Evaluation Approach
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.Algorithms/" title="6.Algorithms" class="md-nav__link">
+      6.Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.Tests/" title="7. Tests" class="md-nav__link">
+      7. Tests
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.Conclusion/" title="8.Conclusion" class="md-nav__link">
+      8.Conclusion
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-target-data" class="md-nav__link">
+     4.1 Target Data 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-source-data" class="md-nav__link">
+     4.2 Source data 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-foreseen-matching-issues" class="md-nav__link">
+     4.3 Foreseen matching issues 
+  </a>
+  
+    <nav class="md-nav" aria-label=" 4.3 Foreseen matching issues ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major" class="md-nav__link">
+    Major
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minor" class="md-nav__link">
+    Minor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repetitions-ties" class="md-nav__link">
+    Repetitions &amp; Ties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!----------------------------------------------->
+
+<h1 id="4-test-data"><span style="color:purple"> 4. Test Data </span><a class="headerlink" href="#4-test-data" title="Permanent link">&para;</a></h1>
+<p><!----------------------------------------------->
+The data used for the matching experiments and described in the next subsections are provided by the Golden Agents project and the Getty.</p>
+<h2 id="41-target-data"><span style="color:purple"> 4.1 Target Data </span><a class="headerlink" href="#41-target-data" title="Permanent link">&para;</a></h2>
+<p>The SAA Inventory Documents database is used in this work as the target data. A number of handwritten inventory documents have already undergone the digitising process amid the SAA&rsquo;s goal to computerise its data. As the sole automated Handwritten Text Recognition (HTR) of inventory documents is not of sufficient quality, the current data in use has been curated. Nevertheless, it still contains some irregularities. These include among others, 
+(1) segments that are <span style="color:blue"><em>broken sentences</em></span>, which 
+(2) sometimes come <span style="color:blue"><em>out of order</em></span>, 
+(3) the appearance of the symbol <span style="color:blue"><em>^</em></span> in <span style="color:blue"><em>“Een ^ besgie”</em></span> denoting the inability of the HTR to recognise a handwritten term.</p>
+<p>An important note regarding the broken segments. One would have expected the <strong>curated</strong> computerised documents to come free of broken segments. However, because the goal is to have a transcript faithful to the original (instead of outputting correct sentence segments), the broken sentences are again present in the curated version as observed in the original handwritten document.</p>
+<details class="example" open="open"><summary>SAA Inventory documents sample</summary><div class="highlight"><pre><span></span><code>-------------------------------------------------------------------------------------------------------------------------------------------
+SAA-item-htr-uri                                                                    text
+-------------------------------------------------------------------------------------------------------------------------------------------
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l1    Inventaris ende Specificatie
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l2    van allen den goederen nagelaten
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l3    bij zal. Maria koerten sulcx
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l4    zij die met haer man Niclaes felt
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l5    int gemeen beseten ende metter
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l6    dood deser werelt ontruijmt
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l7    ende nagelaten heeft.
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l8    Eerstelijck den huijsraet, Imboel
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l9    klederen, kleijnodien ende Juwelen
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l10   getaxeert door Annetje hendricx en Susannetje
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l11   Anthonis gesworen Taxeersters deser stede
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l12   tot alsulcken prijse als volcht
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l14   Een wiegh met een baecker mat, ende
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l15   een matstoel, een bakermand ende
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l16   4
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l17   eenige kleijne mantjes
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l18   Een scharfbort met een doos ende eenigh
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l19   -10
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l20   withoutwerck en rommeling
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l21   Een ijsere rooster, brandijser en een
+https://archief.amsterdam/inventarissen/inventaris/5075.nl.html#A16098000031r1l22   2
+</code></pre></div>
+
+</details>
+<!-------------------------------------------------->
+
+<h2 id="42-source-data"><span style="color:purple"> 4.2 Source data </span><a class="headerlink" href="#42-source-data" title="Permanent link">&para;</a></h2>
+<p><!-------------------------------------------------->
+In order to document the ownership of painting mentioned in inventories, <strong>Montias and others</strong> transcribe about 1280 inventories in total. This database of Transcripts (MDB) is therefore used in this work for as the source data for testing purpose.</p>
+<p>During the task of transcribing, a number of decision was made. For example,</p>
+<ul>
+<li>
+<p>The particular way of enumerating an item such as <span style="color:blue"><em>“No. 21”</em></span> in the digitised SAA is simply <strong>discarded</strong> by Montias.</p>
+</li>
+<li>
+<p>Montias <strong>included</strong> its own representation of the value of an item, for example &hellip; gilders is represented as <span style="color:blue"><em>“2:10:&ndash;”</em></span> .</p>
+</li>
+<li>
+<p><strong>Abbreviations</strong> do not appear consistently in both transcripts. <span style="color:blue"><em>“No. 39. L. vrouwe beeldekens”</em></span> in SAA for example appears as <span style="color:blue"><em>“Lieve-Vrouwe-beeldekens  1:10:&ndash;&ldquo;</em></span> in MDB, but also turned into one word by the use of hyphens.</p>
+</li>
+<li>
+<p>A number of <strong>spelling variations</strong> are also observed. For example, the following terms <span style="color:blue"><em>“Drij, water hontjes, prentebortjes, van de”</em></span> in SAA are transcribed in MDB as <span style="color:blue"><em>“Dry , waterhontjes, print borts, vande”</em></span> </p>
+</li>
+<li>
+<p>Other observations come as <strong>modifications</strong> and <strong>repatitions</strong>. For example, in the SAA, <span style="color:red"><em>“5 alabaster</em></span> <span style="color:blue"><em>bortjes. Een affneming</em></span> <span style="color:red"><em>van &lsquo;t kruys”</em></span> become “<span style="color:red"><em>Vier Albastarde</em></span> <span style="color:blue"><em>bortjes met vergulde lijstjes. Een affneming</em></span> <span style="color:red"><em>vant kruijs”</em></span> in MDB. Observed that the number <strong>5</strong> has been mistakenly reported as the word <strong>vier</strong> instead of <strong>vijf</strong>.</p>
+</li>
+</ul>
+<p>Additionaly, the single item <span style="color:red"><em>“5</em></span> <span style="color:blue"><em>alabaster bortjes”</em></span> in SAA appears five times in MDB and sometimes with mistake: <span style="color:red"><em>“Vier</em></span> <span style="color:blue"><em>Albastarde bortjes met vergulde lijstjes.”</em></span></p>
+<details class="example" open="open"><summary>Montias data transcript sample.</summary><div class="highlight"><pre><span></span><code><span class="o">---------------------------------------------------------------------------------------------------------</span>
+<span class="err">Getty</span><span class="o">-</span><span class="err">Frick</span><span class="o">-</span><span class="err">item</span><span class="o">-</span><span class="nf">uri</span>                                        <span class="err">transcription</span>
+<span class="o">---------------------------------------------------------------------------------------------------------</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0001</span>  <span class="err">Een</span> <span class="err">schilderij</span> <span class="err">van</span> <span class="err">de</span> <span class="err">Samaritaen</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0002</span>  <span class="err">Een</span> <span class="err">stuck</span> <span class="err">schilderij</span> <span class="err">van</span> <span class="err">de</span> <span class="err">liefde</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0003</span>  <span class="err">De</span> <span class="err">salvingh</span> <span class="err">Christi</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0004</span>  <span class="err">Een</span> <span class="err">zeevaertje</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0005</span>  <span class="err">Een</span> <span class="err">landschap</span> <span class="err">met</span> <span class="err">een</span> <span class="err">vergulde</span> <span class="err">lijst</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0006</span>  <span class="err">Een</span> <span class="err">landschap</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0007</span>  <span class="err">Een</span> <span class="err">gerecht</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0008</span>  <span class="err">Eenich</span> <span class="err">geselschap</span> <span class="err">van</span> <span class="err">boeren</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0009</span>  <span class="err">Een</span> <span class="err">landschap</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0010</span>  <span class="err">Een</span> <span class="err">landschap</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0011</span>  <span class="err">De</span> <span class="err">liefde</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0012</span>  <span class="err">Een</span> <span class="err">landschapje</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0013</span>  <span class="err">Mede</span> <span class="err">een</span> <span class="err">landschap</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0014</span>  <span class="err">Eenich</span> <span class="err">geberchte</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0015</span>  <span class="err">Salvator</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0016</span>  <span class="err">Een</span> <span class="err">oud</span> <span class="err">besgie</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0017</span>  <span class="err">Een</span> <span class="err">stuckje</span><span class="p">,</span> <span class="err">gemaeckt</span> <span class="err">bij</span> <span class="err">Potuyl</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0018</span>  <span class="err">De</span> <span class="p">(</span><span class="err">N</span><span class="p">.</span><span class="err">B</span><span class="p">.</span> <span class="err">verbeterd</span> <span class="nn">uit</span><span class="p">:</span> <span class="err">Een</span><span class="p">)</span> <span class="err">geboorte</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0019</span>  <span class="err">Noch</span> <span class="err">een</span> <span class="err">stuckje</span><span class="p">,</span> <span class="err">van</span> <span class="err">Potuyl</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="err">goldenagents</span><span class="p">.</span><span class="err">org</span><span class="o">/</span><span class="err">uv</span><span class="k">a</span><span class="o">/</span><span class="err">SAA</span><span class="o">/</span><span class="err">Inventory</span><span class="o">/</span><span class="err">Item</span><span class="o">/</span><span class="err">N</span><span class="mi">-2097</span><span class="err">_</span><span class="mi">0020</span>  <span class="err">Een</span> <span class="err">munnick</span> <span class="err">ende</span> <span class="err">een</span> <span class="err">bagijn</span>
+</code></pre></div>
+
+</details>
+<!-------------------------------------------------->
+
+<h2 id="43-foreseen-matching-issues"><span style="color:purple"> 4.3 Foreseen matching issues </span><a class="headerlink" href="#43-foreseen-matching-issues" title="Permanent link">&para;</a></h2>
+<p><!-------------------------------------------------->
+All the afore mentioned irregularities leads to some extra difficulties in the already hard task of segment matching. Below, we categorise these foreseen problems as major versus minor issues. At the moment, the main issue comes with the broken sentences and ties. Ties occur when the same item occurs several times in the target data.</p>
+<h3 id="major">Major<a class="headerlink" href="#major" title="Permanent link">&para;</a></h3>
+<blockquote>
+<ul>
+<li>Broken sentences </li>
+<li>Abbreviations</li>
+<li>Combined words</li>
+<li>Numbers to words</li>
+<li>Terms not recognised by HTR</li>
+<li>Repetitions (same query posed more than once)</li>
+<li>Ties (multiple answers for the same query)</li>
+</ul>
+</blockquote>
+<h3 id="minor">Minor<a class="headerlink" href="#minor" title="Permanent link">&para;</a></h3>
+<blockquote>
+<ul>
+<li>Spelling variations</li>
+<li>Small mistakes</li>
+<li>Normalisation</li>
+<li>Data cleaning: remove terms that are added or disregarded by Montias.</li>
+</ul>
+</blockquote>
+<h3 id="repetitions-ties">Repetitions &amp; Ties<a class="headerlink" href="#repetitions-ties" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Duplicates in the target data appear for good reasons. A named item (<em>&ldquo;Een landschap&rdquo;</em>) can occur more than once in the same house (same inventory) or in multiple houses (multiple inventories). In the source data, the same phenomenon can occur for the same reason (correct transcript) or due to subjective interventions, for example reporting the segment 5 times although it appears one time in the original document as a set instead.
+Ideally, we would like to be able to remove those subjective duplicates so that we do not search for the same target several times. Observe that computing the same question/answer several times may result in a misleading evaluation of the algorithm.</p>
+<p>These <strong>interventions</strong> make it difficult to remove duplicates in the source as there is little or no information on which to base the inference of VALID versus INVALID duplicates. So, although occurring three times (<em>A1:Een landschap, A2:Een landschap, A3:Een landschap</em>), <em>A2:Een landschap</em> can not be linked to a randomly selected exact match from a set of segments in the target, which are similar to the source (<em>B1:Een landschap, B2:Een landschap, B3:Een landschap</em>). In other words, <em>A2:Een landschap</em> can only be matched to <em>A2:Een landschap</em> for the sake of example.
+This illustration indicates that, in practice, for a given source transcript there is only one correct answer in the target data. </p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../03.Terminology/" title="3. Terminology" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                3. Terminology
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../05.EvaluationApproach/" title="5.Evaluation Approach" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                5.Evaluation Approach
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
